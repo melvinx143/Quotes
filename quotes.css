@@ -55,6 +55,7 @@ width:100%;
 #btn:hover{
     color:white;
     background-color: black;
+   cursor:pointer;
 }
 .quote
 {
