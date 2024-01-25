@@ -22,23 +22,26 @@ padding:10px;
 font-size: 22px;
 color:rgb(100, 46, 139);
 background-color: cornflowerblue;
+background: transparent;
+height:700px;
 
 }
 body{
-    background-image:url('./images/sky.jpg');
+    background-image:url('./background-image\ \(2\).jpg');
 
 width:100%;
 }
 
 .inner_content
 {
-    background-color: aliceblue;
+    background-color: pink;
     padding:40px;
     margin-top:100px;
     display:grid;
     border-radius: 22px;
     grid-template-rows: auto auto;
     box-shadow: 8px 8px 8px black;
+    margin-bottom:5rem;
 }
 #btn
 {
@@ -60,9 +63,14 @@ width:100%;
     color:white;
     background-color: black;
 }
+.quote
+{
+    background-image: url('./background-image.jpg');
+}
 </style>
 <body>
-    <h2 style="text-align:center;margin-top:1.5rem;text-decoration: underline;">QUOTE GENERATOR</h2>
+    <div class="quote">
+    <h2 style="text-align:center;margin-top:1.5rem;text-decoration: underline;color:white;">QUOTE GENERATOR</h2>
     <div class="content">
         <div class="inner_content">
             <p>"When you have a dream, you've got to grab it and never let go."</p>
@@ -125,7 +133,16 @@ width:100%;
             {
                 quotes:"Only a life lived for others is a life worthwhile.",
                 authorname:" Albert Einstein",
-            },  ]
+            },  
+        {
+            quotes:"If you set your goals ridiculously high and it's a failure, you will fail above everyone else's success.",
+             authorname:"James Cameron",
+        },
+        {
+        quotes:"You may say I'm a dreamer, but I'm not the only one. I hope someday you'll join us. And the world will live as one.",
+            authorname:"John Lennon",
+        }
+        ]
 btn1.addEventListener('click',function(){
     let slides=displaymenu.map(function(item){
         return ` <p>${item.quotes}</p>
@@ -138,5 +155,6 @@ content.innerHTML=slides[Math.floor(Math.random()*slides.length)];
 slides=slides.join('');
 })
     </script>
+    </div>
 </body>
 </html>
